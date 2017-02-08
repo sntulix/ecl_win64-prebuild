@@ -13,7 +13,7 @@
 ```
 
 * build with vs express 2013 update4
-* test on VS2015 x86 x64 Cross Tools Command Prompt
+* tested with VS2015 x86 x64 Cross Tools Command Prompt
 ```
 'prepare to enable msvc c-compile
 (ext:install-c-compiler)
