@@ -1,4 +1,4 @@
-# ecl win64 prebuild
+#ecl win64 prebuild
 
 # note
 
@@ -11,6 +11,7 @@
     :ECL-PDE :DLOPEN :CLOS :THREADS :BOEHM-GC :ANSI-CL :COMMON-LISP
     :IEEE-FLOATING-POINT :CDR-14 :PREFIXED-API :FFI :PENTIUM4 :COMMON :ECL)
 `
+
 * build with vs express 2013 update4
 * test on VS2015 x86 x64 Cross Tools Command Prompt
 * prepare to enable msvc c-compile
