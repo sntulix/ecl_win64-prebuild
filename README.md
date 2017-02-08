@@ -3,23 +3,23 @@
 # note
 
 * .lisp -> .c -> .exe succeed.
-* vs express 2013 update4
-
-
-  ECL (Embeddable Common-Lisp) 16.1.3 (git:UNKNOWN)
-Copyright (C) 1984 Taiichi Yuasa and Masami Hagiya
-Copyright (C) 1993 Giuseppe Attardi
-Copyright (C) 2000 Juan J. Garcia-Ripoll
-Copyright (C) 2016 Daniel Kochmanski
-ECL is free software, and you are welcome to redistribute it
-under certain conditions; see file 'Copyright' for details.
-Type :h for Help.  Top level in: #<process TOP-LEVEL>.
-  > *features*
-(:WALKER :ECL-BYTECMP :CDR-1 :CDR-5 :WIN32 :FORMATTER :CDR-7 :ECL-WEAK-HASH
- :LITTLE-ENDIAN :LONG-LONG :UINT64-T :UINT32-T :UINT16-T
- :RELATIVE-PACKAGE-NAMES :UNICODE :CLOS-STREAMS :CMU-FORMAT :WINDOWS :MSVC
- :ECL-PDE :DLOPEN :CLOS :THREADS :BOEHM-GC :ANSI-CL :COMMON-LISP
- :IEEE-FLOATING-POINT :CDR-14 :PREFIXED-API :FFI :PENTIUM4 :COMMON :ECL)
+```
+    > *features*
+    (:WALKER :ECL-BYTECMP :CDR-1 :CDR-5 :WIN32 :FORMATTER :CDR-7 :ECL-WEAK-HASH
+    :LITTLE-ENDIAN :LONG-LONG :UINT64-T :UINT32-T :UINT16-T
+    :RELATIVE-PACKAGE-NAMES :UNICODE :CLOS-STREAMS :CMU-FORMAT :WINDOWS :MSVC
+    :ECL-PDE :DLOPEN :CLOS :THREADS :BOEHM-GC :ANSI-CL :COMMON-LISP
+    :IEEE-FLOATING-POINT :CDR-14 :PREFIXED-API :FFI :PENTIUM4 :COMMON :ECL)
+`
+* build with vs express 2013 update4
+* test on VS2015 x86 x64 Cross Tools Command Prompt
+* prepare to enable msvc c-compile
+```
+    (ext:install-c-compiler)
+    (setq c::*delete-files* NIL)
+    (compile-file "hello.lisp" :system-p t)
+    (c:build-program "hello" :lisp-files '("hello.obj"))
+```
 
 # references
 
